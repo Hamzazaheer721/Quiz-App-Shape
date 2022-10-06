@@ -15,3 +15,15 @@ export interface IErrorBoundryProps {
 export interface IDefaultThemeProps {
   color: Record<string, string>;
 }
+
+export type QuizType = {
+  step: number;
+};
+
+export enum IQuizActionTypes {
+  INCREMENT = "INCEREMENT",
+}
+export interface IQuizAction {
+  type: IQuizActionTypes;
+  payload?: Partial<QuizType>;
+}
