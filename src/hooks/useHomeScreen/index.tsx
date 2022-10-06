@@ -8,9 +8,12 @@ import {
   ThirdScreen,
 } from "components/HomeScreen/container";
 import { CURRENT_STEP } from "general";
+import { useFetchAndDispatchQuizData } from "hooks/useFetchAndDispatchQuizData";
 
 export const useHomeScreen = () => {
   const { step } = useContext(QuizStateContext);
+
+  useFetchAndDispatchQuizData();
 
   const renderScreen = useCallback(() => {
     switch (step) {

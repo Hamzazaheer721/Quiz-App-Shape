@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 
-import { IQuizAction, IQuizActionTypes, QuizType } from "general";
+import { IQuizAction, IQuizActionTypes, MockDataType, QuizType } from "general";
 import produce from "immer";
 
 export const quizReducer = (state: QuizType, action: IQuizAction): QuizType => {
@@ -11,6 +11,13 @@ export const quizReducer = (state: QuizType, action: IQuizAction): QuizType => {
         draft.step = state.step + 1;
         return draft;
       });
+    case IQuizActionTypes.POPULATE_DATA: {
+      const { payload } = action;
+      return produce(state, (draft) => {
+        draft.data = { ...payload } as MockDataType;
+        return draft;
+      });
+    }
     default:
       return state;
   }
