@@ -4,7 +4,6 @@
 import { Result } from "antd";
 import { IErrorBoundryProps, IErrorBoundryState } from "general";
 import { Component, ErrorInfo } from "react";
-import "./index.css";
 
 export class ErrorBoundry extends Component<
   IErrorBoundryProps,
