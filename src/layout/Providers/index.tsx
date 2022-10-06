@@ -1,8 +1,8 @@
 /* eslint-disable import/no-cycle */
 import { ErrorBoundry } from "components";
 import { FC } from "react";
-import { ThemeProvider } from "styled-components";
 import QuizProvider from "context/quiz.context";
+import { ThemeProvider } from "styled-components";
 import { defaultTheme, GlobalStyle } from "styles";
 import { IProvidersProps } from "./types";
 import "antd/dist/antd.min.css";

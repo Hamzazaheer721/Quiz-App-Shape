@@ -7,21 +7,22 @@ import {
   SecondScreen,
   ThirdScreen,
 } from "components/HomeScreen/container";
+import { CURRENT_STEP } from "general";
 
 export const useHomeScreen = () => {
   const { step } = useContext(QuizStateContext);
 
   const renderScreen = useCallback(() => {
     switch (step) {
-      case 1:
+      case CURRENT_STEP.FIRST:
         return <FirstScreen />;
-      case 2:
+      case CURRENT_STEP.SECOND:
         return <SecondScreen />;
-      case 3:
+      case CURRENT_STEP.THIRD:
         return <ThirdScreen />;
-      case 4:
+      case CURRENT_STEP.FOURTH:
         return <FourthScreen />;
-      case 5:
+      case CURRENT_STEP.FIFTH:
         return <FifthScreen />;
       default:
         return <> </>;
