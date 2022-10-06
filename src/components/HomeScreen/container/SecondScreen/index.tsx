@@ -5,6 +5,7 @@ import { IScreenProps, withContextData } from "hoc";
 import { FC } from "react";
 
 export const SecondScreenComponent: FC<IScreenProps> = (props) => {
+  console.info({ props });
   return (
     <>
       <h1>Second Screen</h1>
