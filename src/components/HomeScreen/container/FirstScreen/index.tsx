@@ -4,12 +4,16 @@
 
 import { IScreenProps, withContextData } from "hoc";
 import { FC } from "react";
+import { Circle, Title } from "styles";
 
 const FirstScreenComponent: FC<IScreenProps> = (props) => {
   console.info({ props });
   return (
     <>
-      <h1>First Screen</h1>
+      <Title>Title</Title>
+      <Circle disableHover icon>
+        i
+      </Circle>
     </>
   );
 };
