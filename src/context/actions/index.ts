@@ -1,6 +1,5 @@
-import { IQuizAction, IQuizActionTypes } from "general";
+import { IQuizAction, IQuizActionTypes, MockDataType } from "general";
 import { Dispatch } from "react";
-import { MockDataType } from "general/types";
 
 export const incrementQuizStep = (dispatch: Dispatch<IQuizAction>) => {
   dispatch({ type: IQuizActionTypes.INCREMENT });
