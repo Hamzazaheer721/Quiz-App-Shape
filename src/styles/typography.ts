@@ -11,32 +11,30 @@ export type CircleType = {
   icon?: boolean;
 };
 
-export const Title = styled.span`
+export const Heading = styled.span`
   font-size: 2.5rem;
   color: ${({ theme }) => theme.color.primary};
-  font-weight: 500;
+  font-weight: 400;
+  margin-inline: 1rem;
 `;
 
-export const Question = styled.span`
-  font-size: 2.5rem;
-  color: ${({ theme }) => theme.color.primary};
-  font-weight: 500;
-`;
-
-export const Circle = styled.div<CircleType>`
-  font-size: 2.5rem;
+export const Circle = styled.span<CircleType>`
+  display: inline-block;
+  height: 3.2rem;
+  font-size: 2rem;
   border-radius: 50%;
-  width: 4rem;
+  width: 3.2rem;
   text-align: center;
   cursor: pointer;
   user-select: none;
   background-color: ${({ theme }) => theme.color.tertiary};
   color: ${({ theme }) => theme.color.secondary};
+  border: 2px solid ${({ theme }) => theme.color.tertiary};
   ${({ large }) =>
     large &&
     css`
-      font-size: 4.5rem;
-      width: 5rem;
+      font-size: 2.5rem;
+      width: 3.6rem;
     `};
 
   ${({ disableHover, theme: { color } }) =>
@@ -52,6 +50,10 @@ export const Circle = styled.div<CircleType>`
     icon &&
     css`
       border: 2px solid ${color.primary};
+      font-size: 1.1rem;
+      font-weight: 700;
+      height: 1.5em;
+      width: 1.7rem;
       color: ${color.primary};
       background-color: transparent;
     `}

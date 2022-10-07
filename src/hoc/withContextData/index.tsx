@@ -4,7 +4,7 @@ import { IQuizAction, QuizType } from "general";
 import { Dispatch, memo, useContext } from "react";
 
 export interface IScreenProps {
-  quizState: QuizType;
+  quizData: QuizType;
   quizDispatch: Dispatch<IQuizAction>;
 }
 
@@ -12,10 +12,10 @@ export const withContextData = <T extends IScreenProps>(
   WrappedComponent: React.ComponentType<T>,
 ) => {
   const ComponentWithTheme = memo((props: Omit<T, keyof IScreenProps>) => {
-    const quizState = useContext(QuizStateContext);
+    const quizData = useContext(QuizStateContext);
     const quizDispatch = useContext(QuizDispatchContext);
 
-    const contextData = { quizState, quizDispatch };
+    const contextData = { quizDispatch, quizData };
 
     return <WrappedComponent {...contextData} {...(props as T)} />;
   });

@@ -1,7 +1,13 @@
 {
   "first": {
     "_id": "1",
-    "title": ""
+    "headings": [
+      {
+        "title": "Title",
+        "prefix": "2",
+        "suffix": ""
+      }
+    ]
   },
   "second": {
     "_id": "2",

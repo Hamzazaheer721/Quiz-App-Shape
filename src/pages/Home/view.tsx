@@ -1,6 +1,6 @@
-import { HomeScreen } from "components";
+import { Home } from "components";
 import { FC, memo } from "react";
 
-const View: FC = memo(() => <HomeScreen />);
+const View: FC = memo(() => <Home />);
 
 export default View;

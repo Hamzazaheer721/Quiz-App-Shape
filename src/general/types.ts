@@ -16,12 +16,26 @@ export interface IDefaultThemeProps {
   color: Record<string, string>;
 }
 
+type Key = {
+  _id: string;
+};
+
+export type HeadingType = {
+  prefix: string;
+  title: string;
+  suffix: string;
+};
+
+export type QuestionSection = Key & {
+  headings: Array<HeadingType>;
+};
+
 export type MockDataType = {
-  first: Record<string, string>;
-  second: Record<string, string>;
-  third: Record<string, string>;
-  fourth: Record<string, string>;
-  fifth: Record<string, string>;
+  first: QuestionSection;
+  second: any;
+  third: any;
+  fourth: any;
+  fifth: any;
 };
 
 export type QuizType = {
@@ -37,4 +51,8 @@ export enum IQuizActionTypes {
 export interface IQuizAction {
   type: IQuizActionTypes;
   payload?: MockDataType;
+}
+
+export interface ICurrentScreenData {
+  currentScreenQuizData: QuestionSection;
 }

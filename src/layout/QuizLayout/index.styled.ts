@@ -9,11 +9,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 60%;
-  min-height: 70rem;
+  max-width: 55%;
+  min-height: 60rem;
   background-color: transparent;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding-inline: 3rem;
+  padding-block: 2.5rem;
+  background-color: gray; // remove me later
 `;
