@@ -1,14 +1,9 @@
 /* eslint-disable import/no-cycle */
 import { useCallback } from "react";
-import { ContentTypeAction, QuizType, ScreensContentType } from "general";
+import { ContentTypeAction, ScreensContentType } from "general";
 import { FirstScreen } from "components/Screens";
 
-export const useHomeScreen = (
-  quizData: QuizType,
-  currentScreenQuizData: ScreensContentType,
-) => {
-  const { step } = quizData;
-
+export const useHomeScreen = (currentScreenQuizData: ScreensContentType) => {
   const {
     content: { type },
   } = currentScreenQuizData;
@@ -30,5 +25,5 @@ export const useHomeScreen = (
     }
   }, [type]);
 
-  return { step, renderScreen };
+  return { renderScreen };
 };

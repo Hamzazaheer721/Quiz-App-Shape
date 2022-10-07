@@ -5,8 +5,8 @@ import { FC, memo } from "react";
 import { HeadingSection } from "./container";
 
 const ScreenLayoutComponent: FC<IScreenProps> = memo(
-  ({ quizData, currentScreenQuizData }) => {
-    const { renderScreen } = useHomeScreen(quizData, currentScreenQuizData);
+  ({ currentScreenQuizData }) => {
+    const { renderScreen } = useHomeScreen(currentScreenQuizData);
     return (
       <>
         <HeadingSection currentScreenQuizData={currentScreenQuizData} />
