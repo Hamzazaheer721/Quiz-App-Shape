@@ -1,32 +1,34 @@
 /* eslint-disable import/no-cycle */
-import { useCallback, useMemo } from "react";
-import { CURRENT_STEP, ScreensContentType, QuizType } from "general";
+import { useCallback } from "react";
+import { ContentTypeAction, QuizType, ScreensContentType } from "general";
 import { FirstScreen } from "components/Screens";
 
-export const useHomeScreen = (quizData: QuizType) => {
-  const { step, data } = quizData;
+export const useHomeScreen = (
+  quizData: QuizType,
+  currentScreenQuizData: ScreensContentType,
+) => {
+  const { step } = quizData;
 
-  const currentScreenQuizData = useMemo<ScreensContentType>(() => {
-    const currentStep = step - 1;
-    return Object.values(data)[currentStep];
-  }, [data, step]);
+  const {
+    content: { type },
+  } = currentScreenQuizData;
 
   const renderScreen = useCallback(() => {
-    switch (step) {
-      case CURRENT_STEP.FIRST:
+    switch (type) {
+      case ContentTypeAction.DROP_DOWN:
         return <FirstScreen />;
-      // case CURRENT_STEP.SECOND:
-      //   return <SecondScreen />;
-      // case CURRENT_STEP.THIRD:
-      //   return <ThirdScreen />;
-      // case CURRENT_STEP.FOURTH:
-      //   return <FourthScreen />;
-      // case CURRENT_STEP.FIFTH:
-      //   return <FifthScreen />;
+      case ContentTypeAction.DOB_INPUT:
+        return <FirstScreen />;
+      case ContentTypeAction.ROUND_BUTTONS:
+        return <FirstScreen />;
+      case ContentTypeAction.TEXT_AREA:
+        return <FirstScreen />;
+      case ContentTypeAction.OPTIONS:
+        return <FirstScreen />;
       default:
         return <> </>;
     }
-  }, [step]);
+  }, [type]);
 
-  return { step, renderScreen, currentScreenQuizData };
+  return { step, renderScreen };
 };
