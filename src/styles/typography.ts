@@ -34,7 +34,7 @@ export const Circle = styled.div<CircleType>`
   color: ${({ theme }) => theme.color.secondary};
   ${({ large }) =>
     large &&
-    `
+    css`
       font-size: 4.5rem;
       width: 5rem;
     `};
