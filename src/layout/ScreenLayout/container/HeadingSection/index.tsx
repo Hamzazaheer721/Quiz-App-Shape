@@ -17,9 +17,15 @@ export const HeadingSection: FC<ICurrentScreenData> = ({
       const { prefix, suffix, title } = headingObj;
       return (
         <HeadingContainer key={title}>
-          {!!prefix && <Circle disableHover>{prefix}</Circle>}
-          <Heading>{title}</Heading>
-          {!!suffix && <Info title={suffix} />}
+          {!!prefix && (
+            <Circle length={prefix.length} disableHover>
+              {prefix}
+            </Circle>
+          )}
+          <Heading>
+            {title}
+            {!!suffix && <Info title={suffix} />}
+          </Heading>
         </HeadingContainer>
       );
     })}

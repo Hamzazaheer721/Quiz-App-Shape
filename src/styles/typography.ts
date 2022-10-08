@@ -9,6 +9,7 @@ export type CircleType = {
   large?: boolean;
   disableHover?: boolean;
   icon?: boolean;
+  length?: number;
 };
 
 export const Heading = styled.span`
@@ -56,5 +57,16 @@ export const Circle = styled.span<CircleType>`
       width: 1.7rem;
       color: ${color.primary};
       background-color: transparent;
+      vertical-align: middle;
+      margin-inline-start: 1rem;
+    `}
+
+    ${({ length }) =>
+    length &&
+    length > 2 &&
+    css`
+      font-size: 1.5rem;
+      line-height: 3rem; // for making font in middle
+      font-weight: 400;
     `}
 `;

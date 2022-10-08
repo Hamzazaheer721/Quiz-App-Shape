@@ -1,29 +1,35 @@
 /* eslint-disable import/no-cycle */
 import { useCallback } from "react";
 import { ContentTypeAction, ScreensContentType } from "general";
-import { FirstScreen } from "components/Screens";
+import {
+  BalanceScreen,
+  DobScreen,
+  PerformanceScreen,
+  StressScreen,
+  TitleScreen,
+} from "components/Screens";
 
 export const useHomeScreen = (currentScreenQuizData: ScreensContentType) => {
-  const {
-    content: { type },
-  } = currentScreenQuizData;
+  const { content } = currentScreenQuizData || {};
 
   const renderScreen = useCallback(() => {
+    const { type } = content || {};
     switch (type) {
       case ContentTypeAction.DROP_DOWN:
-        return <FirstScreen />;
+        return <TitleScreen />;
       case ContentTypeAction.DOB_INPUT:
-        return <FirstScreen />;
+        return <DobScreen />;
       case ContentTypeAction.ROUND_BUTTONS:
-        return <FirstScreen />;
+        return <PerformanceScreen />;
       case ContentTypeAction.TEXT_AREA:
-        return <FirstScreen />;
+        return <StressScreen />;
       case ContentTypeAction.OPTIONS:
-        return <FirstScreen />;
+        return <BalanceScreen />;
       default:
         return <> </>;
     }
-  }, [type]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [content?.type]);
 
   return { renderScreen };
 };

@@ -18,7 +18,6 @@ export const withContextData = <T extends IScreenProps>(
     const quizDispatch = useContext(QuizDispatchContext);
 
     const { currentScreenQuizData } = useCurrentScreenQuizData(quizState);
-
     const contextData = {
       quizDispatch,
       quizData: quizState,
