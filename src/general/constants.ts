@@ -60,3 +60,8 @@ export const SOS_ERROR_MESSAGE =
   "You exceeded the character limit, Please enter upto 250 characters only";
 
 export const SKIPPED = "Value skipped";
+
+export const CACHED_KEY = "ANSWERS";
+
+export const SUCCESS_MESSAGE =
+  "Congratulations! Quiz is completed, Answers have been saved in Local Storage";

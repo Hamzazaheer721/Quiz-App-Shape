@@ -35,6 +35,13 @@ export const Heading = styled.span<HeadingType>`
     `}
 `;
 
+export const Description = styled.span`
+  font-size: inherit;
+  color: ${({ theme }) => theme.color.secondary};
+  font-weight: 400;
+  margin-inline: 1rem;
+`;
+
 export const Button = styled.a`
   text-decoration: none;
   font-size: 1.5rem;
@@ -43,13 +50,13 @@ export const Button = styled.a`
   border-radius: 10rem;
   margin-top: 6rem;
   transition: all 0.2s;
-  background-color: ${({ theme }) => theme.color.secondary};
+  background-color: ${({ theme }) => theme.color.darkgray};
   color: ${({ theme }) => theme.color.primary};
 
   &:hover,
   &:active {
     background-color: ${({ theme }) => theme.color.primary};
-    color: ${({ theme }) => theme.color.secondary};
+    color: ${({ theme }) => theme.color.darkgray};
     transition: 1s;
   }
 `;
@@ -111,4 +118,17 @@ export const Circle = styled.span<CircleType>`
       line-height: 3rem; // for making font in middle
       font-weight: 400;
     `}
+`;
+
+export const Square = styled.span`
+  border: none;
+  background-color: ${({ theme }) => theme.color.secondary};
+  color: ${({ theme }) => theme.color.tertiary};
+  padding: 0.2rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: inherit;
+  cursor: pointer;
+  border-radius: 0.8rem;
 `;

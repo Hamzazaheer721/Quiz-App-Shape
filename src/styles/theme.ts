@@ -9,5 +9,6 @@ export const defaultTheme: IDefaultThemeProps = {
     black: "#000000",
     gray: "#937d8e",
     lightgray: "#b09ca4",
+    darkgray: "#503c4c",
   },
 };

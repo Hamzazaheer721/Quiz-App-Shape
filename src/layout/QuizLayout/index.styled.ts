@@ -15,7 +15,6 @@ export const Container = styled.div`
   background-color: transparent;
   padding-inline: 3rem;
   padding-block: 2.5rem;
-  background-color: gray; // remove me later
 
   @media ${device.tablet} {
     max-width: 80%;

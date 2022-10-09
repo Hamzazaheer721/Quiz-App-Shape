@@ -85,3 +85,5 @@ export interface ICurrentScreenData {
 }
 
 export type NotificationType = "success" | "info" | "warning" | "error";
+
+export type BalanceScreenDataPayload = { option: string; text: string };

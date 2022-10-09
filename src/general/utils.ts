@@ -1,4 +1,6 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable import/no-cycle */
+
 import { DateStateType } from "components/Screens/DobScreen/types";
 import { AnswerPayload, ANSWER_KEYS } from "general";
 
@@ -18,3 +20,6 @@ export const normalizeDateStateForContext = ({
     name: ANSWER_KEYS.DATE_OF_BIRTH,
     value: `${day}/${month}/${year}`,
   } as AnswerPayload);
+
+export const setLocalStorage = (key: string, data: Record<string, string>) =>
+  localStorage.setItem(key, JSON.stringify(data));
