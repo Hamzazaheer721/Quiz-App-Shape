@@ -10,7 +10,7 @@ import { useStressScreen } from "./hook";
 import { StressScreenWrapper, TextArea } from "./index.styled";
 
 export const StressScreenComponent: FC<IScreenProps> = memo(
-  ({ currentScreenQuizData, quizData, quizDispatch }) => {
+  ({ quizDispatch }) => {
     const { inputRef, handleClick, handleSkip, handleKeyPress } =
       useStressScreen(quizDispatch);
     return (
