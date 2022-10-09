@@ -9,7 +9,8 @@
       }
     ],
     "content": {
-      "type": "DROP_DOWN"
+      "type": "DROP_DOWN",
+      "value": ["Mr", "Ms", "Mrs", "Miss", "Dr"]
     },
     "buttons": true
   },

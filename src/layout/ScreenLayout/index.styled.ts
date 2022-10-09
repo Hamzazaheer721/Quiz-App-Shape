@@ -12,3 +12,8 @@ export const HeadingContainer = styled.div`
 export const TitleSection = styled.div`
   display: block;
 `;
+
+export const ScreenBodyContainer = styled.div`
+  margin-inline-start: 4.5rem;
+  margin-block: 2rem;
+`;

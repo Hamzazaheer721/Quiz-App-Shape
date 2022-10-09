@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable @typescript-eslint/ban-types */
 import { QuizDispatchContext, QuizStateContext } from "context/quiz.context";
 import { IQuizAction, QuizType, ScreensContentType } from "general";

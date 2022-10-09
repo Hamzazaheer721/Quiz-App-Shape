@@ -5,6 +5,7 @@ import { IScreenProps, withContextData } from "hoc";
 import { useHomeScreen } from "hooks";
 import { FC, memo, useContext } from "react";
 import { HeadingSection } from "./container";
+import { ScreenBodyContainer } from "./index.styled";
 
 const ScreenLayoutComponent: FC<IScreenProps> = memo(
   ({ currentScreenQuizData }) => {
@@ -13,16 +14,18 @@ const ScreenLayoutComponent: FC<IScreenProps> = memo(
     return (
       <>
         <HeadingSection currentScreenQuizData={currentScreenQuizData} />
-        {renderScreen()}
-        <button
-          onClick={() => {
-            incrementQuizStep(a);
-          }}
-          type="submit"
-        >
-          {" "}
-          Click me
-        </button>
+        <ScreenBodyContainer>{renderScreen()}</ScreenBodyContainer>
+        <div>
+          <button
+            onClick={() => {
+              incrementQuizStep(a);
+            }}
+            type="submit"
+          >
+            {" "}
+            Click me
+          </button>
+        </div>
       </>
     );
   },

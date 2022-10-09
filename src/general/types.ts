@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { Dispatch, FunctionComponent, ReactNode } from "react";
 import { ContentTypeAction, IQuizActionTypes } from "./constants";
 
 export type RoutesType = {
@@ -41,7 +41,7 @@ export type OptionsValueType = {
 export type ContentType = {
   content: {
     type: ContentTypeAction;
-    value?: [number] | [OptionsValueType];
+    value?: [number] | [OptionsValueType] | [string];
   };
 };
 
@@ -62,14 +62,22 @@ export type MockDataType = {
   fifth: ScreensContentType;
 };
 
+export type QuizDispatchType = Dispatch<IQuizAction>;
+
+export type AnswerPayload = {
+  name: string;
+  value: string;
+};
+
 export type QuizType = {
   step: number;
   data: MockDataType;
+  answers: Record<string, string>;
 };
 
 export interface IQuizAction {
   type: IQuizActionTypes;
-  payload?: MockDataType;
+  payload?: MockDataType | AnswerPayload;
 }
 
 export interface ICurrentScreenData {

@@ -1,4 +1,9 @@
-import { IQuizAction, IQuizActionTypes, MockDataType } from "general";
+import {
+  AnswerPayload,
+  IQuizAction,
+  IQuizActionTypes,
+  MockDataType,
+} from "general";
 import { Dispatch } from "react";
 
 export const incrementQuizStep = (dispatch: Dispatch<IQuizAction>) => {
@@ -10,4 +15,11 @@ export const populateData = (
   payload: MockDataType,
 ) => {
   dispatch({ type: IQuizActionTypes.POPULATE_DATA, payload });
+};
+
+export const setAnswer = (
+  dispatch: Dispatch<IQuizAction>,
+  payload: AnswerPayload,
+) => {
+  dispatch({ type: IQuizActionTypes.SET_ANSWER, payload });
 };

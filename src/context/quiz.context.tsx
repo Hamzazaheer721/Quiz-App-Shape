@@ -3,7 +3,7 @@ import { createContext, Dispatch, ElementType, memo, useReducer } from "react";
 import { quizReducer } from "./reducer";
 
 /* Initial State */
-export const initialValue = { step: 1, data: {} } as QuizType;
+export const initialValue = { step: 1, data: {}, answers: {} } as QuizType;
 
 /* Contexts */
 export const QuizStateContext = createContext<QuizType>(initialValue);
