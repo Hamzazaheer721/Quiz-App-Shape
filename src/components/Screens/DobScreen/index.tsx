@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable no-console */
 /* eslint-disable import/no-cycle */
@@ -13,17 +14,20 @@ import {
 } from "./index.styled";
 
 const DobScreenComponent: FC<IScreenProps> = memo(({ quizDispatch }) => {
-  const { handleChange, handleClick } = useDobScreen(quizDispatch);
+  const { dayRef, handleChange, handleClick, handleKeyDown } =
+    useDobScreen(quizDispatch);
   return (
     <>
       <DobScreenWrapper>
         <DobScreenChildWrapper>
           <Heading>Day</Heading>
           <InputField
+            ref={dayRef}
             type="number"
             placeholder="DD"
             name="day"
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
         </DobScreenChildWrapper>
         <DobScreenChildWrapper>
@@ -33,6 +37,7 @@ const DobScreenComponent: FC<IScreenProps> = memo(({ quizDispatch }) => {
             placeholder="MM"
             name="month"
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
         </DobScreenChildWrapper>
         <DobScreenChildWrapper>
@@ -42,6 +47,7 @@ const DobScreenComponent: FC<IScreenProps> = memo(({ quizDispatch }) => {
             placeholder="YYYY"
             name="year"
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
         </DobScreenChildWrapper>
       </DobScreenWrapper>

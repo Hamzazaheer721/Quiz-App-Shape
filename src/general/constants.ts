@@ -52,3 +52,5 @@ export const DOB_ERROR_MESSAGE = {
 };
 
 export const ERROR_MESSAGE = "SOMETHING WENT WRONG";
+
+export const ENTER_KEY = "Enter";
