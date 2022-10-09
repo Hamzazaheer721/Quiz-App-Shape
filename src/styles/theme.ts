@@ -8,5 +8,6 @@ export const defaultTheme: IDefaultThemeProps = {
     white: "#FFFFFF",
     black: "#000000",
     gray: "#937d8e",
+    lightgray: "#b09ca4",
   },
 };

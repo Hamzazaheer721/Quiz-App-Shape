@@ -18,7 +18,7 @@ export type HeadingType = {
 };
 
 export const Heading = styled.span<HeadingType>`
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: ${({ theme }) => theme.color.primary};
   font-weight: 400;
   margin-inline: 1rem;
@@ -68,8 +68,15 @@ export const Circle = styled.span<CircleType>`
   ${({ large }) =>
     large &&
     css`
-      font-size: 2.5rem;
-      width: 3.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 5rem;
+      font-size: 3rem;
+      height: 5rem;
+      background-color: ${({ theme }) => theme.color.lightgray};
+      aspect-ratio: 1/1;
+      border: none;
     `};
 
   ${({ disableHover, theme: { color } }) =>

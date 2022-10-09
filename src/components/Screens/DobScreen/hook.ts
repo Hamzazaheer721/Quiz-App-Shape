@@ -21,7 +21,7 @@ import {
   QuizDispatchType,
   ENTER_KEY,
 } from "general";
-import { useSetAnswer, useNextScreen, useErrorToaster } from "hooks";
+import { useProceed, useErrorToaster } from "hooks";
 import { debounce } from "lodash";
 import { initialDateState } from "./helper";
 
@@ -31,8 +31,8 @@ export const useDobScreen = (quizDispatch: QuizDispatchType) => {
 
   const dayRef = useRef<HTMLInputElement>(null);
 
-  const setAnswer = useSetAnswer(quizDispatch);
-  const nextScreen = useNextScreen(quizDispatch);
+  const { setAnswer, nextScreen } = useProceed(quizDispatch);
+
   const { showErrorMessage } = useErrorToaster();
 
   useLayoutEffect(() => {
