@@ -3,6 +3,7 @@ import { useCallback } from "react";
 import { ContentTypeAction, ScreensContentType } from "general";
 import {
   BalanceScreen,
+  CompletionScreen,
   DobScreen,
   PerformanceScreen,
   StressScreen,
@@ -26,7 +27,7 @@ export const useHomeScreen = (currentScreenQuizData: ScreensContentType) => {
       case ContentTypeAction.OPTIONS:
         return <BalanceScreen />;
       default:
-        return <> </>;
+        return <CompletionScreen />;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content?.type]);

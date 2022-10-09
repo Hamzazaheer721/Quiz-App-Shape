@@ -15,6 +15,7 @@ export type CircleType = {
 export type HeadingType = {
   small?: boolean;
   skip?: boolean;
+  center?: boolean;
 };
 
 export const Heading = styled.span<HeadingType>`
@@ -22,6 +23,11 @@ export const Heading = styled.span<HeadingType>`
   color: ${({ theme }) => theme.color.primary};
   font-weight: 400;
   margin-inline: 1rem;
+  ${({ center }) =>
+    center &&
+    css`
+      text-align: center;
+    `}
   ${({ small }) =>
     small &&
     css`

@@ -1,12 +1,26 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import styled from "styled-components";
+import { device } from "styles";
 
 export const DobScreenWrapper = styled.div`
   width: 100%;
   display: flex;
   gap: 3.5rem;
   overflow: hidden;
+
+  @media ${device.desktop1080p} {
+    width: 85%;
+  }
+  @media ${device.desktop} {
+    width: 85%;
+  }
+  @media ${device.laptop} {
+    width: 85%;
+  }
+  @media ${device.tablet} {
+    width: 85%;
+  }
 `;
 
 export const DobScreenChildWrapper = styled.div`

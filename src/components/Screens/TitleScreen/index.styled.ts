@@ -1,12 +1,26 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import styled from "styled-components";
 import { Select } from "antd";
+import { device } from "styles";
 
 export const SelectFieldWrapper = styled.div`
-  width: 100%;
+  width: 80%;
   position: relative;
   font-size: 2rem;
   color: white;
+
+  @media ${device.desktop1080p} {
+    width: 60%;
+  }
+  @media ${device.desktop} {
+    width: 60%;
+  }
+  @media ${device.laptop} {
+    width: 60%;
+  }
+  @media ${device.tablet} {
+    width: 60%;
+  }
 `;
 
 export const Label = styled.span`
