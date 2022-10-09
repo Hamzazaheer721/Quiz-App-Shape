@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable @typescript-eslint/naming-convention */
 export const CURRENT_STEP = {
   FIRST: 1,
@@ -54,3 +55,8 @@ export const DOB_ERROR_MESSAGE = {
 export const ERROR_MESSAGE = "SOMETHING WENT WRONG";
 
 export const ENTER_KEY = "Enter";
+
+export const SOS_ERROR_MESSAGE =
+  "You exceeded the character limit, Please enter upto 250 characters only";
+
+export const SKIPPED = "Value skipped";

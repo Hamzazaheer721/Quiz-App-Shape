@@ -31,6 +31,7 @@ export const Heading = styled.span<HeadingType>`
     skip &&
     css`
       margin-inline-end: 2rem;
+      cursor: pointer;
     `}
 `;
 
