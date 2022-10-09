@@ -20,7 +20,7 @@
       {
         "title": "Date of Birth",
         "prefix": "3",
-        "suffix": "i"
+        "suffix": "Please enter your Date of Birth"
       }
     ],
     "content": {
@@ -54,7 +54,7 @@
       {
         "title": "Are there any other sources of stress not mentioned here that affects you?",
         "prefix": "6",
-        "suffix": "i"
+        "suffix": "Mention Your sources in text area below"
       }
     ],
     "content": {
