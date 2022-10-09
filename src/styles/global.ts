@@ -17,6 +17,16 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #725166;
   }
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
   .ant-select-dropdown {
     background-color: #937d8e !important;
     border-radius: 0 0 1.5rem 1.5rem !important;

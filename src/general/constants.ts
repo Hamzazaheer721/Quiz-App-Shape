@@ -22,6 +22,7 @@ export enum ContentTypeAction {
 }
 
 export const DELAY = 1000;
+export const SHORT_DELAY = 100;
 
 export const ANSWER_KEYS = {
   TITLE: "title",
@@ -30,3 +31,24 @@ export const ANSWER_KEYS = {
   SOURCE_OF_STRESS: "source of stress",
   BALANCE: "balancer",
 };
+
+export enum DOB_INPUT_TYPE {
+  DAY = "day",
+  MONTH = "month",
+  YEAR = "year",
+}
+
+export const TOASTER_TYPE = {
+  SUCCESS: "Sucess",
+  ERORR: "error",
+  INFO: "info",
+  WARNING: "warning",
+};
+
+export const DOB_ERROR_MESSAGE = {
+  INVALID_DAY: "Day should be within 1-31 range",
+  INVALID_MONTH: "Month should be within 1-12 range",
+  INVALID_YEAR: "Years from 1920-2006 are valid",
+};
+
+export const ERROR_MESSAGE = "SOMETHING WENT WRONG";

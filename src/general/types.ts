@@ -83,3 +83,5 @@ export interface IQuizAction {
 export interface ICurrentScreenData {
   currentScreenQuizData: ScreensContentType;
 }
+
+export type NotificationType = "success" | "info" | "warning" | "error";

@@ -12,11 +12,45 @@ export type CircleType = {
   length?: number;
 };
 
-export const Heading = styled.span`
+export type HeadingType = {
+  small?: boolean;
+  skip?: boolean;
+};
+
+export const Heading = styled.span<HeadingType>`
   font-size: 2.5rem;
   color: ${({ theme }) => theme.color.primary};
   font-weight: 400;
   margin-inline: 1rem;
+  ${({ small }) =>
+    small &&
+    css`
+      font-size: 1.5rem;
+    `}
+  ${({ skip }) =>
+    skip &&
+    css`
+      margin-inline-end: 2rem;
+    `}
+`;
+
+export const Button = styled.a`
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.8rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  margin-top: 6rem;
+  transition: all 0.2s;
+  background-color: ${({ theme }) => theme.color.secondary};
+  color: ${({ theme }) => theme.color.primary};
+
+  &:hover,
+  &:active {
+    background-color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.secondary};
+    transition: 1s;
+  }
 `;
 
 export const Circle = styled.span<CircleType>`
