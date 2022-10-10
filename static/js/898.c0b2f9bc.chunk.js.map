@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/898.c0b2f9bc.chunk.js","mappings":"6JAGMA,GAAWC,EAAAA,EAAAA,OAAK,kBAAM,SAAC,KAAD,GAAN,IAEtB,W","sources":["pages/Home/view.tsx"],"sourcesContent":["import { Home } from \"components\";\nimport { FC, memo } from \"react\";\n\nconst View: FC = memo(() => <Home />);\n\nexport default View;\n"],"names":["View","memo"],"sourceRoot":""}
